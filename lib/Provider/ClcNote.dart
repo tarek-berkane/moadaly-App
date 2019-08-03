@@ -25,4 +25,16 @@ class ClcNote {
     for (int i = 0; i < note.length; i++) total_note += (note[i] * coef[i]);
     return total_note / total_cof;
   }
+
+
+
+  double there_note2(double tp, double td, double exam) =>
+      (((tp + td) / 2)*0.4 + (exam)*0.6);
+
+
+
+  double tow_note2(double tp_or_td, double exam) =>
+      (tp_or_td *0.4 + exam * 0.6);
+
+  
 }
