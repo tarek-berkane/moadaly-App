@@ -1,5 +1,5 @@
 
-[![downloads]( https://img.shields.io/sourceforge/dt/mishkal.svg)](http://sourceforge.org/projects/mishkal)
+[![downloads]( https://img.shields.io/sourceforge/dt/mishkal.svg)](https://drive.google.com/file/d/1giCopcBEf5grvkjhYitHEJNbkxSpH6V3/view?usp=sharing)
 
 #تطبيق معدلي Moadaly App
 
