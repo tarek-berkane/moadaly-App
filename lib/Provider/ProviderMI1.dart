@@ -44,10 +44,10 @@ class ProviderMi1 with ChangeNotifier {
       if (_modLength == 1)
         _moyenneModS1[i] = note;
       else if (_modLength == 2)
-        _moyenneModS1[i] = _clc.tow_note(
+        _moyenneModS1[i] = _clc.tow_note2(
             _moduleNote1[_module1[i]][1], _moduleNote1[_module1[i]][0]);
       else
-        _moyenneModS1[i] = _clc.there_note(_moduleNote1[_module1[i]][2],
+        _moyenneModS1[i] = _clc.there_note2(_moduleNote1[_module1[i]][2],
             _moduleNote1[_module1[i]][1], _moduleNote1[_module1[i]][0]);
 
       if (_moyenneModS1[i] >= 10) {
@@ -82,10 +82,10 @@ class ProviderMi1 with ChangeNotifier {
       if (_modLength == 1)
         _moyenneModS2[i] = note;
       else if (_modLength == 2)
-        _moyenneModS2[i] = _clc.tow_note(
+        _moyenneModS2[i] = _clc.tow_note2(
             _moduleNote2[_module2[i]][1], _moduleNote2[_module2[i]][0]);
       else
-        _moyenneModS2[i] = _clc.there_note(_moduleNote2[_module2[i]][2],
+        _moyenneModS2[i] = _clc.there_note2(_moduleNote2[_module2[i]][2],
             _moduleNote2[_module2[i]][1], _moduleNote2[_module2[i]][0]);
 
       if (_moyenneModS2[i] >= 10) {
