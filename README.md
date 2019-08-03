@@ -1,5 +1,6 @@
 
 [![downloads]( https://img.shields.io/sourceforge/dt/mishkal.svg)](https://drive.google.com/file/d/1giCopcBEf5grvkjhYitHEJNbkxSpH6V3/view?usp=sharing)
+[![site]( https://img.shields.io/badge/site-10k-green)](https://abdelmadjidsmail.github.io/moadaly/index.html)
 
 #تطبيق معدلي Moadaly App
 
@@ -42,8 +43,11 @@ try moadaly App : https://drive.google.com/file/d/1giCopcBEf5grvkjhYitHEJNbkxSpH
 
 ## Project Implementation by 
 * [**Taha Zarouki**](github.com/linuxscout)
+* [**Smail Abd El Madjid**]()
+* [**Aouf Ali**](https://github.com/Sho-Oter)  *design* 
 
 
 ## Built With
 Flutter 
+
 Dart
