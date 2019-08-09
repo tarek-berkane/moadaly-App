@@ -1,5 +1,5 @@
 
-[![downloads]( https://img.shields.io/sourceforge/dt/mishkal.svg)](https://drive.google.com/file/d/1giCopcBEf5grvkjhYitHEJNbkxSpH6V3/view?usp=sharing)
+[![downloads]( https://img.shields.io/sourceforge/dt/mishkal.svg)](https://drive.google.com/file/d/1giCopcBEf5grvkjhYitHEJNbkxSpH6V3/view)
 [![site]( https://img.shields.io/badge/site-10k-green)](https://abdelmadjidsmail.github.io/moadaly/index.html)
 
 #تطبيق معدلي Moadaly App
@@ -21,7 +21,7 @@
 
 try moadaly : https://abdelmadjidsmail.github.io/moadaly/ 
 
-try moadaly App : https://drive.google.com/file/d/1giCopcBEf5grvkjhYitHEJNbkxSpH6V3/view?usp=sharing
+try moadaly App : https://drive.google.com/file/d/1giCopcBEf5grvkjhYitHEJNbkxSpH6V3/view
 
 # treatment
 
