@@ -43,7 +43,7 @@ try moadaly App : https://drive.google.com/file/d/1giCopcBEf5grvkjhYitHEJNbkxSpH
 
 ## Project Implementation by 
 * [**Taha Zarouki**](github.com/linuxscout)
-* [**Smail Abd El Madjid**]() Moadaly site
+* [**Smail Abd El Madjid**](https://github.com/Abdelmadjidsmail/) Moadaly site
 * [**Aouf Ali**](https://github.com/Sho-Oter)  *design* Moadaly site
 
 
