@@ -1,13 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:pro_mi_0001/screens/MI1.dart';
 import 'package:pro_mi_0001/screens/MI2.dart';
+import 'package:pro_mi_0001/widget/CustomCard.dart';
 
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(title: 'Material App', home: HomePage());
+
+    return MaterialApp(
+    debugShowCheckedModeBanner: false,
+      title: 'Material App',
+      home: HomePage(),
+
+    );
   }
 }
 
@@ -20,96 +27,71 @@ class HomePage extends StatelessWidget {
           title: Text(" Moadaly"),
           centerTitle: true,
         ),
-        body: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Center(
-              child: InkWell(
-                child: Card(
-                  child: Container(
-                    alignment: Alignment.center,
-                    width: 220,
-                    height: 80,
-                    child: Row(
-                      children: <Widget>[
-                        Container(
-                          height: 70,
-                          width: 55,
-                          child: Image.asset('images/file.png'),
-                        ),
-                        Text("Math informatique 1"),
-                      ],
-                    ),
-                  ),
+        body: SingleChildScrollView(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: CustomCard(
+                  text: 'Math Informatique 1',
+                  srcImage: 'images/mi1.png',
+                  page: HomeMi1Screen(),
                 ),
-                onTap: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => HomeMi1Screen()));
-                },
               ),
-            ),
-            Center(
-              child: InkWell(
-                child: Card(
-                  child: Container(
-                    alignment: Alignment.center,
-                    width: 220,
-                    height: 80,
-                    child: Row(
-                      children: <Widget>[
-                        Container(
-                          height: 70,
-                          width: 55,
-                          child: Image.asset('images/file.png'),
-                        ),
-                        Text("Math informatique 2"),
-                      ],
-                    ),
-                  ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: CustomCard(
+                  text: 'Math Informatique 2',
+                  srcImage: 'images/mi2.png',
+                  page: HomeMi2Screen(),
                 ),
-                onTap: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => HomeMi2Screen()));
-                },
               ),
-            ),
-          
-            SeparateWidget()
-          ],
+              SeparateWidget()
+            ],
+          ),
         ));
   }
-
 }
 
 class SeparateWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Center(
-              child: InkWell(
-                child: Card(
-                  child: Container(
-                    alignment: Alignment.center,
-                    width: 220,
-                    height: 80,
-                    child: Row(
-                      children: <Widget>[
-                        Container(
-                          height: 70,
-                          width: 55,
-                          child: Image.asset('images/file.png'),
-                        ),
-                        Text("Math informatique 3"),
-                      ],
-                    ),
-                  ),
-                ),
-                onTap: () {
-          Scaffold.of(context).showSnackBar(SnackBar(
-            content: Text('Coming soon'),
-            duration: Duration(seconds: 1),
-          ));
-        },
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Card(
+        elevation: 4,
+        color: Color(0xFFFFFFFF),
+        margin: EdgeInsets.symmetric(horizontal: 12, vertical: 5),
+        child: InkWell(
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: <Widget>[
+              Container(
+                height: 120,
+                width: 120,
+                child: Image.asset('images/mi3.png'),
               ),
-            );
+              Container(
+                width: 200,
+                child: Text(
+                  'Math Informatique 3',
+                  style: TextStyle(fontSize: 19, fontWeight: FontWeight.bold),
+                ),
+              )
+            ],
+          ),
+          onTap: () {
+            Scaffold.of(context).showSnackBar(SnackBar(
+              backgroundColor: Colors.blue,
+              elevation: 2,
+              content: Text('Soon'),
+              duration: Duration(seconds: 2),
+            ));
+          },
+        ),
+      ),
+    );
   }
 }

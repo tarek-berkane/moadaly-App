@@ -1,176 +1,111 @@
 import 'package:flutter/material.dart';
-import 'package:pro_mi_0001/Provider/ProviderMI1.dart';
-import 'package:pro_mi_0001/widget/TableGen.dart';
-import 'package:pro_mi_0001/widget/WidgetHelp.dart';
+import 'package:pro_mi_0001/Provider/ProvMi1/ProviderMI1S1.dart';
+
 import 'package:provider/provider.dart';
 
+import '../CustomTableRow.dart';
+
 class TableMi1S1 extends StatelessWidget {
-  WidgetHelp _widgetHelp = WidgetHelp();
+  ProviderMi1S1 _mi1Providr;
+  InierTableRow<ProviderMi1S1> _inireTableRow;
+
   @override
   Widget build(BuildContext context) {
-    final _mi2Providr = Provider.of<ProviderMi1>(context);
+    _mi1Providr = Provider.of<ProviderMi1S1>(context);
+    _inireTableRow = InierTableRow(context);
 
-    Size size1 = MediaQuery.of(context).size;
+    return Table(
+      columnWidths: {0: FractionColumnWidth(.7)},
+      border: TableBorder.all(),
+      children: [
+        CustomRowName().rowOfColumnName(),
+        TableRow(children: [
+          //?----------------------------------Unite 1 -------------------------------------------------
+          Container(
+              height: 210,
+              child: InerTable<ProviderMi1S1>(
+                children: [
+                  _inireTableRow.customTablerow(0, 2), //?Analyse
+                  _inireTableRow.customTablerow(1, 2), //?algebre
+                ],
+              )),
+          credOfUnite(0, 210),
+          moyOfUnite(0, 210),
+          uniteName('fondamentale 1', 210)
+        ]),
+        TableRow(children: [
+          //?----------------------------------Unite 2---------------------------------------------------
+          Container(
+              height: 210,
+              child: InerTable<ProviderMi1S1>(
+                children: [
+                  _inireTableRow.customTablerow(2, 3), //?Algo
+                  _inireTableRow.customTablerow(3, 2), //?strm
+                ],
+              )),
+          credOfUnite(1, 210),
+          moyOfUnite(1, 210),
+          uniteName('fondamentale 2', 210)
+        ]),
+        TableRow(children: [
+          //?----------------------------------Unite 3 ---------------------------------------------
+          Container(
+              height: 210,
+              child: InerTable<ProviderMi1S1>(
+                children: [
+                  _inireTableRow.customTablerow(4, 1), //?FR
+                  _inireTableRow.customTablerow(5, 1), //?En
+                ],
+              )),
+          credOfUnite(2, 210),
+          moyOfUnite(2, 210),
+          uniteName('Methodologie', 210)
+        ]),
+        TableRow(
+          children: [
+            //?-------------------------------- Unite 4 --------------------------------------------
+            Container(
+                height: 105,
+                child: InerTable<ProviderMi1S1>(
+                  children: [
+                    _inireTableRow.customTablerow(6, 2), //?Phys
+                  ],
+                )),
+            credOfUnite(3, 105),
+            moyOfUnite(3, 105),
+            uniteName('Decouverte', 105)
+          ], //?----------------------------------------------------------
+        ),
+      ],
+    );
+  }
 
-    void onTap(int i, int j, double note) {
-      _mi2Providr.setmoduleNoteS1(i, j, note);
-    }
-
+// todo Make uniteName and
+  //*this Fun return A Container with Text rotate 90
+  Container uniteName(String name, double height) {
     return Container(
-      width: size1.width,
-      child: TableGen(
-        [
-          TableRow(
-            children: <Widget>[
-              _widgetHelp.dvider_column(<Widget>[
-                for (int i = 0; i < 2; i++)
-                  _widgetHelp.text_fit(_mi2Providr.getModuleNameS1(i)),
-              ]),
-              _widgetHelp.dvider_column(<Widget>[
-                _widgetHelp.widgetInColumn(<Widget>[
-                  _widgetHelp.button_note(context, 'Analyse 1', "TD", onTap, 0,
-                      1, _mi2Providr.getModuleNoteS1(0, 1)),
-                  _widgetHelp.button_note(context, 'Analyse 1', "exame", onTap,
-                      0, 0, _mi2Providr.getModuleNoteS1(0, 0)),
-                ]),
-                _widgetHelp.widgetInColumn(<Widget>[
-                  _widgetHelp.button_note(context, 'Algebre 1', "TD", onTap, 1,
-                      1, _mi2Providr.getModuleNoteS1(1, 1)),
-                  _widgetHelp.button_note(context, 'Algebre 1', "Exame", onTap,
-                      1, 0, _mi2Providr.getModuleNoteS1(1, 0)),
-                ]),
-              ]),
-              _widgetHelp.dvider_column(<Widget>[
-                cont_Center(_mi2Providr.getCofS1(0).toString()),
-                cont_Center(_mi2Providr.getCofS1(1).toString()),
-              ]),
-              _widgetHelp.dvider_column(<Widget>[
-                cont_Center(_mi2Providr.getOrginCredS1(0).toString()),
-                cont_Center(_mi2Providr.getOrginCredS1(1).toString()),
-              ]),
-              _widgetHelp.dvider_column(<Widget>[
-                cont_Center(numbreToString(_mi2Providr.getmoyenneModS1(0))),
-                cont_Center(numbreToString(_mi2Providr.getmoyenneModS1(1))),
-              ]),
-              cont_Center(numbreToString(_mi2Providr.getMoyenneUnitS1(0))),
-              cont_Center(_mi2Providr.getCredUnitS1(0).toString()),
-              RotatedBox(
-                quarterTurns: 1,
-                child: Container(
-                    alignment: Alignment.center, child: Text('fondamentale 1')),
-              )
-            ],
-          ),
-          TableRow(
-            children: <Widget>[
-              _widgetHelp.dvider_column(<Widget>[
-                for (int i = 2; i < 4; i++)
-                  _widgetHelp.text_fit(_mi2Providr.getModuleNameS1(i)),
-              ]),
-              _widgetHelp.dvider_column(<Widget>[
-                _widgetHelp.widgetInColumn(<Widget>[
-                  _widgetHelp.button_note(context, 'Algorithmiques', "TP",
-                      onTap, 2, 2, _mi2Providr.getModuleNoteS1(2, 2)),
-                  _widgetHelp.button_note(context, 'Algorithmiques', "TD",
-                      onTap, 2, 1, _mi2Providr.getModuleNoteS1(2, 1)),
-                  _widgetHelp.button_note(context, 'Algorithmiques', "Exame",
-                      onTap, 2, 0, _mi2Providr.getModuleNoteS1(2, 0)),
-                ]),
-                _widgetHelp.widgetInColumn(<Widget>[
-                  _widgetHelp.button_note(context, 'Structure Machine 1', "TD",
-                      onTap, 3, 1, _mi2Providr.getModuleNoteS1(3, 1)),
-                  _widgetHelp.button_note(context, 'Structure Machine 1',
-                      "Exame", onTap, 3, 0, _mi2Providr.getModuleNoteS1(3, 0)),
-                ]),
-              ]),
-              _widgetHelp.dvider_column(<Widget>[
-                cont_Center(_mi2Providr.getCofS1(2).toString()),
-                cont_Center(_mi2Providr.getCofS1(3).toString()),
-              ]),
-              _widgetHelp.dvider_column(<Widget>[
-                cont_Center(_mi2Providr.getOrginCredS1(2).toString()),
-                cont_Center(_mi2Providr.getOrginCredS1(3).toString()),
-              ]),
-              _widgetHelp.dvider_column(<Widget>[
-                cont_Center(numbreToString(_mi2Providr.getmoyenneModS1(2))),
-                cont_Center(numbreToString(_mi2Providr.getmoyenneModS1(3))),
-              ]),
-              cont_Center(numbreToString(_mi2Providr.getMoyenneUnitS1(1))),
-              cont_Center(_mi2Providr.getCredUnitS1(1).toString()),
-              RotatedBox(
-                quarterTurns: 1,
-                child: Container(
-                    alignment: Alignment.center,
-                    child: Text('fondamentale 2 ')),
-              )
-            ],
-          ),
-          TableRow(
-            children: <Widget>[
-              _widgetHelp.dvider_column(<Widget>[
-                for (int i = 4; i < 6; i++)
-                  _widgetHelp.text_fit(_mi2Providr.getModuleNameS1(i)),
-              ]),
-              _widgetHelp.dvider_column(<Widget>[
-                _widgetHelp.button_note(context, 'Terminologie Scient', "Exame",
-                    onTap, 4, 0, _mi2Providr.getModuleNoteS1(4, 0)),
-                _widgetHelp.button_note(context, 'Structure Machine 1', "Exame",
-                    onTap, 5, 0, _mi2Providr.getModuleNoteS1(5, 0)),
-              ]),
-              _widgetHelp.dvider_column(<Widget>[
-                cont_Center(_mi2Providr.getCofS1(4).toString()),
-                cont_Center(_mi2Providr.getCofS1(5).toString()),
-              ]),
-              _widgetHelp.dvider_column(<Widget>[
-                cont_Center(_mi2Providr.getOrginCredS1(4).toString()),
-                cont_Center(_mi2Providr.getOrginCredS1(5).toString()),
-              ]),
-              _widgetHelp.dvider_column(<Widget>[
-                cont_Center(numbreToString(_mi2Providr.getmoyenneModS1(4))),
-                cont_Center(numbreToString(_mi2Providr.getmoyenneModS1(5))),
-              ]),
-              cont_Center(numbreToString(_mi2Providr.getMoyenneUnitS1(2))),
-              cont_Center(_mi2Providr.getCredUnitS1(2).toString()),
-              RotatedBox(
-                quarterTurns: 1,
-                child: Container(
-                    alignment: Alignment.center,
-                    child: Text(' Méthodologie ')),
-              )
-            ],
-          ),
-          TableRow(
-            children: <Widget>[
-              _widgetHelp.text_fit("Physique1"),
-              _widgetHelp.widgetInColumn(<Widget>[
-                _widgetHelp.button_note(context, 'Physique1', "TD", onTap, 6,
-                    1, _mi2Providr.getModuleNoteS1(6, 1)),
-                _widgetHelp.button_note(context, 'Physique1', "Exame", onTap, 6,
-                    0, _mi2Providr.getModuleNoteS1(6, 0)),
-              ]),
-              cont_Center(_mi2Providr.getCofS1(6).toString()),
-              cont_Center(_mi2Providr.getOrginCredS1(6).toString()),
-              cont_Center(numbreToString(_mi2Providr.getmoyenneModS1(6))),
-              cont_Center(numbreToString(_mi2Providr.getMoyenneUnitS1(3))),
-              cont_Center(_mi2Providr.getCredUnitS1(3).toString()),
-              RotatedBox(
-                quarterTurns: 1,
-                child: Container(
-                    alignment: Alignment.center, child: Text('Decouverte')),
-              )
-            ],
-          ),
-        ],
+      height: height,
+      child: RotatedBox(
+        quarterTurns: 1,
+        child: Container(alignment: Alignment.center, child: Text(name)),
       ),
     );
   }
 
-  String numbreToString(num) {
-    return (num == 0) ? '0' : num.toStringAsFixed(2);
+  //* fun that return Container containe Text Widget of MOY OF UNITE
+  Container moyOfUnite(int numUnite, double height) {
+    return Container(
+      height: height,
+      alignment: Alignment.center,
+      child: Text("${_mi1Providr.getMoyUnite(numUnite).toStringAsFixed(2)}"),
+    );
   }
-
-  Container cont_Center(String text) => Container(
-        alignment: Alignment.center,
-        child: Text(text),
-      );
+  //* fun that return Container containe Text Widget of CRED OF UNITE
+  Container credOfUnite(int numOfUnite, double height) {
+    return Container(
+      height: height,
+      alignment: Alignment.center,
+      child: Text("${_mi1Providr.getCredUnite(numOfUnite)}"),
+    );
+  }
 }

@@ -1,20 +1,18 @@
-
 import 'package:flutter/material.dart';
-import 'package:pro_mi_0001/Provider/ProvMi2/ProviderMI2S4.dart';
+import 'package:pro_mi_0001/Provider/ProvMi2/ProviderMI2S3.dart';
 
 import 'package:provider/provider.dart';
 
 import '../CustomTableRow.dart';
 
-class TableMi2S4 extends StatelessWidget {
-  ProviderMi2S4 _mi2Providr;
-  InierTableRow<ProviderMi2S4> _inireTableRow;
-    final double heightOfTable = 105;
-
+class TableMi2S3 extends StatelessWidget {
+  ProviderMi2S3 _mi2Providr;
+  InierTableRow<ProviderMi2S3> _inireTableRow;
+  final double heightOfTable = 105;
 
   @override
   Widget build(BuildContext context) {
-    _mi2Providr = Provider.of<ProviderMi2S4>(context);
+    _mi2Providr = Provider.of<ProviderMi2S3>(context);
     _inireTableRow = InierTableRow(context);
 
     return Table(
@@ -26,51 +24,50 @@ class TableMi2S4 extends StatelessWidget {
           //?----------------------------------Unite 1 -------------------------------------------------
           Container(
               height: sizetable(0),
-              child: InerTable<ProviderMi2S4>(
+              child: InerTable<ProviderMi2S3>(
                 children: [
-                  _inireTableRow.customTablerow(0, 3), //?architecture
+                  _inireTableRow.customTablerow(0, 2), //?architecture
                   _inireTableRow.customTablerow(1, 3), //?algorithmique
-                  _inireTableRow.customTablerow(2, 2), //?logic_M
+                  _inireTableRow.customTablerow(2, 2), //?algorithmique
                 ],
               )),
-          credOfUnite(0,  sizetable(0)),
-          moyOfUnite(0,  sizetable(0)),
-          uniteName('fondamentale 1',  sizetable(0))
+          credOfUnite(0, sizetable(0)),
+          moyOfUnite(0, sizetable(0)),
+          uniteName('fondamentale 1', sizetable(0))
         ]),
         TableRow(children: [
           //?----------------------------------Unite 2---------------------------------------------------
           Container(
-              height:  sizetable(1),
-              child: InerTable<ProviderMi2S4>(
+              height: sizetable(1),
+              child: InerTable<ProviderMi2S3>(
                 children: [
-                  _inireTableRow.customTablerow(3, 2), //?poo
-                  _inireTableRow.customTablerow(4, 3), //?system info
-                  _inireTableRow.customTablerow(5, 2), //?theries des langages
+                  _inireTableRow.customTablerow(3, 3), //?poo
+                  _inireTableRow.customTablerow(4, 2), //?system info
+                  _inireTableRow.customTablerow(5, 2), //?system info
                 ],
               )),
-          credOfUnite(1,  sizetable(1)),
-          moyOfUnite(1,  sizetable(1)),
-          uniteName('fondamentale 2',  sizetable(1))
+          credOfUnite(1, sizetable(1)),
+          moyOfUnite(1, sizetable(1)),
+          uniteName('fondamentale 2', sizetable(1))
         ]),
         TableRow(children: [
           //?----------------------------------Unite 3 ---------------------------------------------
           Container(
-              height:  sizetable(2),
-              child: InerTable<ProviderMi2S4>(
+              height: sizetable(2),
+              child: InerTable<ProviderMi2S3>(
                 children: [
                   _inireTableRow.customTablerow(6, 1), //?En
-                   _inireTableRow.customTablerow(7, 1),
                 ],
               )),
-          credOfUnite(2,  sizetable(2)),
-          moyOfUnite(2,  sizetable(2)),
-          uniteName('Methodologie', 210)
+          credOfUnite(2, sizetable(2)),
+          moyOfUnite(2, sizetable(2)),
+          uniteName('Methodologie', sizetable(2))
         ]),
       ],
     );
   }
 
-// todo Make uniteName and
+// TODO:need to find a way to remove duplicate code
   //*this Fun return A Container with Text rotate 90
   Container uniteName(String name, double height) {
     return Container(
@@ -99,6 +96,6 @@ class TableMi2S4 extends StatelessWidget {
       child: Text("${_mi2Providr.getCredUnite(numOfUnite)}"),
     );
   }
-    double sizetable(int index)=>heightOfTable*_mi2Providr.getUniteSize(index);
 
+  double sizetable(int index)=>heightOfTable*_mi2Providr.getUniteSize(index);
 }
