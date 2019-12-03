@@ -51,6 +51,9 @@ flutter:
   assets:
     - images/file.png
     - images/mi.jpg
+    - images/mi1.png
+    - images/mi2.png
+    - images/mi3.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
