@@ -17,7 +17,7 @@ class ProviderMi1S1 extends BaseModel {
 
   static ModuleTd physique1 = ModuleTd(cof: 2, cred: 4);
 
-  List<dynamic> modulesS1 = [
+  List<dynamic> modules = [
     analyse1,
     algebre1,
     algo1,
@@ -27,14 +27,14 @@ class ProviderMi1S1 extends BaseModel {
     physique1
   ];
 
-  List<Unite> uniteS1 = [
+  List<Unite> unite = [
     Unite([analyse1, algebre1]),
     Unite([algo1, strm1]),
     Unite([terminologieS, langueEtrangere]),
     Unite([physique1]),
   ];
 
-  List<String> module1Mi1 = [
+  List<String> moduleName = [
     'Analyse 1 ',
     'Algebre 1',
     'Algorithmiques \net structure \nde données',
@@ -44,66 +44,4 @@ class ProviderMi1S1 extends BaseModel {
     'Physique1'
   ];
 
-  @override
-  String getModuleName(int num) => module1Mi1[num];
-
-  @override
-  int getCredUnite(int num) => uniteS1[num].credUnite();
-
-  @override
-  double getMoyUnite(int num) => uniteS1[num].moyenneUnite();
-
-  @override
-  getModule(int num) => modulesS1[num];
-
-  @override
-  void setExamaModule(int num, double note) {
-    setState(ViewState.Busy);
-    modulesS1[num].set_exama(note);
-    setState(ViewState.Idle);
-  }
-
-  @override
-  void setTdModule(int num, double note) {
-    setState(ViewState.Busy);
-    modulesS1[num].set_td(note);
-    setState(ViewState.Idle);
-  }
-
-  @override
-  void setTpModule(int num, double note) {
-    setState(ViewState.Busy);
-    modulesS1[num].set_tp(note);
-    setState(ViewState.Idle);
-  }
-
-  int credTotal() {
-    int som = 0;
-    for (int i = 0; i < 4; i++) {
-      som += getCredUnite(i);
-    }
-    return som;
-  }
-
-  @override
-  int credObtenu() {
-    int sum = 0;
-    for (int i = 0; i < 4; i++) sum += getCredUnite(i);
-    return moyObtenu()>=10 ? 30 :sum;
-    // return sum;
-  }
-
-  @override
-  double moyObtenu() {
-    double moyObt=0;
-    int cof =0;
-    for(int i =0 ; i<7;i++){
-     moyObt +=  getModule(i).clcMoy()*getModule(i).cof;
-     cof += getModule(i).cof;
-    }
-    return moyObt/cof;
-  }
-
-   @override
-  int getUniteSize(int index) => uniteS1[index].modules.length;
 }
