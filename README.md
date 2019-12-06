@@ -8,7 +8,7 @@
 
 <div align="center">
     <img src="https://github.com/tarekDZ2019/moadaly-App/blob/master/app-img/update1.png" width="250px"</img>
-    <img src="https://github.com/tarekDZ2019/moadaly-App/blob/master/app-img/update2.png" width="250px"</img> 
+    <img src="https://github.com/tarekDZ2019/moadaly-App/blob/master/app-img/update4.png" width="250px"</img> 
 </div>
 <div align="center">
     <img src="https://github.com/tarekDZ2019/moadaly-App/blob/master/app-img/update3.png" width="250px"</img> 
