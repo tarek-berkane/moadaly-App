@@ -1,4 +1,4 @@
-package com.example.pro_mi_0001;
+package com.DevDz.pro_mi_0001;
 
 import android.os.Bundle;
 import io.flutter.app.FlutterActivity;

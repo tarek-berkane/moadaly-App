@@ -26,14 +26,13 @@ class TableMi2S3 extends StatelessWidget {
               height: sizetable(0),
               child: InerTable<ProviderMi2S3>(
                 children: [
-                  _inireTableRow.customTablerow(0, 2), //?architecture
+                  _inireTableRow.customTablerow(0, 3), //?architecture
                   _inireTableRow.customTablerow(1, 3), //?algorithmique
-                  _inireTableRow.customTablerow(2, 2), //?algorithmique
                 ],
               )),
           credOfUnite(0, sizetable(0)),
           moyOfUnite(0, sizetable(0)),
-          uniteName('fondamentale 1', sizetable(0))
+          uniteName('Unite 1', sizetable(0))
         ]),
         TableRow(children: [
           //?----------------------------------Unite 2---------------------------------------------------
@@ -41,14 +40,13 @@ class TableMi2S3 extends StatelessWidget {
               height: sizetable(1),
               child: InerTable<ProviderMi2S3>(
                 children: [
-                  _inireTableRow.customTablerow(3, 3), //?poo
-                  _inireTableRow.customTablerow(4, 2), //?system info
-                  _inireTableRow.customTablerow(5, 2), //?system info
+                  _inireTableRow.customTablerow(2, 3), //?sys info
+                  _inireTableRow.customTablerow(3, 2), //?therie des graphes
                 ],
               )),
           credOfUnite(1, sizetable(1)),
           moyOfUnite(1, sizetable(1)),
-          uniteName('fondamentale 2', sizetable(1))
+          uniteName('Unite 2', sizetable(1))
         ]),
         TableRow(children: [
           //?----------------------------------Unite 3 ---------------------------------------------
@@ -56,18 +54,33 @@ class TableMi2S3 extends StatelessWidget {
               height: sizetable(2),
               child: InerTable<ProviderMi2S3>(
                 children: [
-                  _inireTableRow.customTablerow(6, 1), //?En
+                  _inireTableRow.customTablerow(4, 2), //?methodes numeriques
+                  _inireTableRow.customTablerow(5, 2), //?logique mathematique
                 ],
               )),
           credOfUnite(2, sizetable(2)),
           moyOfUnite(2, sizetable(2)),
-          uniteName('Methodologie', sizetable(2))
+          uniteName('Unite 3', sizetable(2))
+        ]),
+        TableRow(children: [
+          //?----------------------------------Unite 4 ---------------------------------------------
+          Container(
+              height: sizetable(3),
+              child: InerTable<ProviderMi2S3>(
+                children: [
+                  _inireTableRow.customTablerow(6, 1), //?langue etrangere
+                ],
+              )),
+          credOfUnite(3, sizetable(3)),
+          moyOfUnite(3, sizetable(3)),
+          uniteName('Unite 4', sizetable(3))
         ]),
       ],
     );
   }
 
 // TODO:need to find a way to remove duplicate code
+
   //*this Fun return A Container with Text rotate 90
   Container uniteName(String name, double height) {
     return Container(

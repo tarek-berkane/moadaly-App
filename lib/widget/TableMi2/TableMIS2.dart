@@ -22,49 +22,60 @@ class TableMi2S4 extends StatelessWidget {
       border: TableBorder.all(),
       children: [
         CustomRowName().rowOfColumnName(),
-        TableRow(children: [
           //?----------------------------------Unite 1 -------------------------------------------------
+        TableRow(children: [
           Container(
               height: sizetable(0),
               child: InerTable<ProviderMi2S4>(
                 children: [
-                  _inireTableRow.customTablerow(0, 3), //?architecture
-                  _inireTableRow.customTablerow(1, 3), //?algorithmique
-                  _inireTableRow.customTablerow(2, 2), //?logic_M
+                  _inireTableRow.customTablerow(0, 3), //?theorie des langages
+                  _inireTableRow.customTablerow(1, 3), //?system d'exploitation
                 ],
               )),
           credOfUnite(0,  sizetable(0)),
           moyOfUnite(0,  sizetable(0)),
-          uniteName('fondamentale 1',  sizetable(0))
+          uniteName('Unite 1',  sizetable(0))
         ]),
-        TableRow(children: [
           //?----------------------------------Unite 2---------------------------------------------------
+        TableRow(children: [
           Container(
               height:  sizetable(1),
               child: InerTable<ProviderMi2S4>(
                 children: [
-                  _inireTableRow.customTablerow(3, 2), //?poo
-                  _inireTableRow.customTablerow(4, 3), //?system info
-                  _inireTableRow.customTablerow(5, 2), //?theries des langages
+                  _inireTableRow.customTablerow(2, 3), //?Bases de donnees
+                  _inireTableRow.customTablerow(3, 3), //?Reseaux
                 ],
               )),
           credOfUnite(1,  sizetable(1)),
           moyOfUnite(1,  sizetable(1)),
-          uniteName('fondamentale 2',  sizetable(1))
+          uniteName('Unite 2',  sizetable(1))
         ]),
-        TableRow(children: [
-          //?----------------------------------Unite 3 ---------------------------------------------
+          //?----------------------------------Unite 3---------------------------------------------------
+          TableRow(children: [
           Container(
-              height:  sizetable(2),
+              height:  sizetable(1),
               child: InerTable<ProviderMi2S4>(
                 children: [
-                  _inireTableRow.customTablerow(6, 1), //?En
-                   _inireTableRow.customTablerow(7, 1),
+                  _inireTableRow.customTablerow(4, 2), //?Poo
+                  _inireTableRow.customTablerow(5, 2), //?Dev Web
                 ],
               )),
-          credOfUnite(2,  sizetable(2)),
-          moyOfUnite(2,  sizetable(2)),
-          uniteName('Methodologie', 210)
+          credOfUnite(1,  sizetable(2)),
+          moyOfUnite(1,  sizetable(2)),
+          uniteName('Unite 3',  sizetable(2))
+        ]),
+          //?----------------------------------Unite 4 ---------------------------------------------
+        TableRow(children: [
+          Container(
+              height:  sizetable(3),
+              child: InerTable<ProviderMi2S4>(
+                children: [
+                  _inireTableRow.customTablerow(6, 1), //?langue etrangere
+                ],
+              )),
+          credOfUnite(3,  sizetable(3)),
+          moyOfUnite(3,  sizetable(3)),
+          uniteName('Unite 4', sizetable(3))
         ]),
       ],
     );
