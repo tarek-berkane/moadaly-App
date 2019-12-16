@@ -21,7 +21,7 @@
 
 try moadaly : https://abdelmadjidsmail.github.io/moadaly/ 
 
-[<span style="color: red;">new</span>]try moadaly App : https://drive.google.com/open?id=1ECDoTvPSR24LW7aVreTvEhCETzYDvFl2
+[ <p style="color: red;">new</p> ]try moadaly App : https://drive.google.com/open?id=1ECDoTvPSR24LW7aVreTvEhCETzYDvFl2
 
 # treatment
 
