@@ -3,6 +3,14 @@
 [![site]( https://img.shields.io/badge/site-10k-green)](https://abdelmadjidsmail.github.io/moadaly/index.html)
 
 #تطبيق معدلي Moadaly App
+# mishkal
+ try Moadaly apk : 
+<div>
+    <a href='https://play.google.com/store/apps/details?id=com.DevDZBouira.moadaly_app'><img alt='Get it on Google Play' src='images/google_play.png' height='48px'/></a>
+</div>
+
+try moadaly : https://abdelmadjidsmail.github.io/moadaly/ 
+
 
 تطبيق معدلي هو تطبيق لحساب المعدل الفصلي و السنوي للسنة الاولى و الثانية اعلام ألي مفتوح المصدر مبني بواسطة فلاتر
 
@@ -19,9 +27,7 @@
   
   محاكي حساب المعدل لطلبة
 
-try moadaly : https://abdelmadjidsmail.github.io/moadaly/ 
 
-[<a href='https://drive.google.com/open?id=1ECDoTvPSR24LW7aVreTvEhCETzYDvFl2'>new</a>] try moadaly App : https://drive.google.com/open?id=1ECDoTvPSR24LW7aVreTvEhCETzYDvFl2
 
 # treatment
 
