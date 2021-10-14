@@ -1,4 +1,10 @@
 
+
+<h3>this is an old version, please switch to the new version of module</h3>
+<h4> [**Moadaly v2**](https://github.com/tarek-berkane/moadaly_v2)
+ </h4>
+<hr>
+
 [![downloads]( https://img.shields.io/sourceforge/dt/mishkal.svg)](https://drive.google.com/file/d/1giCopcBEf5grvkjhYitHEJNbkxSpH6V3/view)
 [![site]( https://img.shields.io/badge/site-10k-green)](https://abdelmadjidsmail.github.io/moadaly/index.html)
 
