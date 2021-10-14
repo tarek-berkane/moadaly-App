@@ -1,7 +1,8 @@
 
 
 <h3>this is an old version, please switch to the new version of module</h3>
-[Moadaly v2](https://github.com/tarek-berkane/moadaly_v2)
+
+[Moadaly_v2](https://github.com/tarek-berkane/moadaly_v2)
 
 <hr>
 
