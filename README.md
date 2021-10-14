@@ -1,6 +1,6 @@
 
 
-<h3>this is an old version, please switch to the new version of module</h3>
+<h3>This is an old version, please switch to the new version of moadaly app</h3>
 
 [Moadaly_v2](https://github.com/tarek-berkane/moadaly_v2)
 
